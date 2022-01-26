@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 
@@ -6,7 +7,7 @@ const authRouter = require('./routes/auth');
 const connectDB = async () => {
   try {
     await mongoose.connect(
-      `mongodb+srv://phuc1234:1234@mern-learnit.lhdka.mongodb.net/mern-learnit?retryWrites=true&w=majority`,
+      `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@mern-learnit.lhdka.mongodb.net/mern-learnit?retryWrites=true&w=majority`,
       {
         useUnifiedTopology: true, //option to remove warning
       }
@@ -22,6 +23,7 @@ const connectDB = async () => {
 connectDB();
 
 const app = express();
+app.use(express.json());
 
 app.use('/api/auth', authRouter);
 
