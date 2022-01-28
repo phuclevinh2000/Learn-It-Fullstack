@@ -30,3 +30,19 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWYyO
 ###
 GET http://localhost:5000/api/posts
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWYyOTNiNmJmMDQzOTdmYzQ5YTJhM2QiLCJpYXQiOjE2NDMyODk2NTh9.e4N6po4SYqEeHePTb-NicW7sz6LJlVI4_Z8o0-K8xYM
+
+###
+PUT http://localhost:5000/api/posts/61f3b4cf5224e48c3483f1a0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWYyOTNiNmJmMDQzOTdmYzQ5YTJhM2QiLCJpYXQiOjE2NDMyODk2NTh9.e4N6po4SYqEeHePTb-NicW7sz6LJlVI4_Z8o0-K8xYM
+
+{
+  "title": "Updated Third Post",
+  "description": "HIHIHIHIHI",
+  "url": "https://vue.org",
+  "status": "LEARNING"
+}
+
+###
+DELETE http://localhost:5000/api/posts/61f29416bf04397fc49a2a3f
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWYyOTNiNmJmMDQzOTdmYzQ5YTJhM2QiLCJpYXQiOjE2NDMyODk2NTh9.e4N6po4SYqEeHePTb-NicW7sz6LJlVI4_Z8o0-K8xYM
