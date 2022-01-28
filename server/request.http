@@ -2,8 +2,8 @@ POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-  "username": "phucle",
-  "password": "1234"
+  "username": "jim",
+  "password": "jim"
 }
 
 ###
@@ -11,6 +11,22 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-  "username":"phucle",
-  "password": "1234"
+  "username":"jim",
+  "password": "jim"
 }
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWYyOTNiNmJmMDQzOTdmYzQ5YTJhM2QiLCJpYXQiOjE2NDMyODc0Nzh9.e8NJiXS0hQwgpAPbwOcAZBTfo0slJJAgp1toJ0rV2zg 
+
+{
+  "title": "my third post",
+  "description": "abc",
+  "url": "google.com",
+  "status": "LEARNING"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWYyOTNiNmJmMDQzOTdmYzQ5YTJhM2QiLCJpYXQiOjE2NDMyODk2NTh9.e4N6po4SYqEeHePTb-NicW7sz6LJlVI4_Z8o0-K8xYM
