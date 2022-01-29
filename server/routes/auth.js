@@ -70,14 +70,14 @@ router.post('/login', async (req, res) => {
     if (!user)
       return res
         .status(400)
-        .json({ success: false, message: 'Incorrect username ' });
+        .json({ success: false, message: 'Incorrect username or password' });
 
     // username found
     const passwordValid = await argon2.verify(user.password, password);
     if (!passwordValid)
       return res
         .status(400)
-        .json({ success: false, message: 'Incorrect  password' });
+        .json({ success: false, message: 'Incorrect username or password' });
 
     // All good
     // return token
